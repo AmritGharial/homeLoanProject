@@ -8,7 +8,7 @@ class HomeLoanFormPage {
     }
 
     get salariedRdoBtn() {
-        return $("#salaried");
+        return $(`[for="salaried"]`);
     }
 
     get homeLoanDropdown() {
@@ -39,15 +39,19 @@ class HomeLoanFormPage {
         return $$(".error");
     }
 
-    async fillForm(name, mobile, homeLoanDropdown) {
+    get generateOtpImage() {
+        return $(`[alt="OTP Image"]`);
+    }
+
+    async fillForm(name, mobile, homeLoanDropdown, monthlyIncome, pincode, loanAmount) {
         await this.nameField.waitForDisplayed();
         await this.nameField.setValue(name);
         await this.mobileField.setValue(mobile);
         await this.salariedRdoBtn.click();
         await this.homeLoanDropdown.selectByVisibleText(homeLoanDropdown);
-        await this.nextMonthlyIncomeField.setValue(mobile);
-        await this.pinCodeIdField.setValue(mobile);
-        await this.reqLoanAmountId.setValue(mobile);
+        await this.nextMonthlyIncomeField.setValue(monthlyIncome);
+        await this.pinCodeIdField.setValue(pincode);
+        await this.reqLoanAmountId.setValue(loanAmount);
         await this.generateOTPButton.click();
     }
 }

@@ -1,4 +1,5 @@
 const HomeLoanFormPage = require('../pageobjects/homeLoanForm.page.cjs');
+const Constants = require('../constants/constants.cjs');
  
 describe('Home Loan Application Form Tests', () => {
  
@@ -40,20 +41,26 @@ describe('Home Loan Application Form Tests', () => {
  
     it('pincode field validation', async () => {
         await HomeLoanFormPage.generateOTPButton.waitForDisplayed({ timeout: 40000 });
-        await HomeLoanFormPage.pinCodeIdField.setValue("352436");
+        const randomPin = Math.floor(100000 + Math.random() * 900000);
+        console.log(randomPin);
+        await HomeLoanFormPage.pinCodeIdField.setValue(randomPin);
         await HomeLoanFormPage.nameField.click();
         await expect(HomeLoanFormPage.errorMsgs[0]).toHaveText("Service is not available on this PIN code", { containing: true });
-        await HomeLoanFormPage.pinCodeIdField.setValue("141003");
+        await HomeLoanFormPage.pinCodeIdField.setValue(Constants.pincode);
         await HomeLoanFormPage.nameField.click();
         await expect(HomeLoanFormPage.errorMsgs[0]).not.toHaveText("Service is not available on this PIN code", { containing: true });
     });
  
     it('required loan amount field validation', async () => {
         await HomeLoanFormPage.generateOTPButton.waitForDisplayed({ timeout: 40000 });
-        await HomeLoanFormPage.reqLoanAmountId.setValue("35243");
+        const incorrectLoanAmount = Math.floor(Math.random() * 100000); // loan amount less than 100000
+        console.log(incorrectLoanAmount);
+        await HomeLoanFormPage.reqLoanAmountId.setValue(incorrectLoanAmount);
         await HomeLoanFormPage.nameField.click();
         await expect(HomeLoanFormPage.errorMsgs[4]).toHaveText("The loan amount must be higher than Rs.1,00,000", { containing: true });
-        await HomeLoanFormPage.reqLoanAmountId.setValue("14461003");
+        const correctLoanAmount = Math.floor(100000 + Math.random() * 900000);
+        console.log(correctLoanAmount);
+        await HomeLoanFormPage.reqLoanAmountId.setValue(correctLoanAmount);
         await HomeLoanFormPage.nameField.click();
         await expect(HomeLoanFormPage.errorMsgs[4]).not.toHaveText("The loan amount must be higher than Rs.1,00,000", { containing: true });
     });
@@ -72,5 +79,3 @@ describe('Home Loan Application Form Tests', () => {
     });
  
 });
- 
- 
