@@ -22,6 +22,6 @@
     "send:email": "node test/utils/sendReport.cjs",
     "open:allure": "allure open allure-report",
     "test": "npm run clean:allure && npx wdio wdio.conf.js && npm run generate:allure && npm run open:allure",
-    "test:deploy:email": "npm run clean:allure && npx wdio wdio.conf.js && npm run generate:allure && npm run deploy:report && npm run send:email"
+    "test:deploy:email": "npm run clean:allure && npx wdio wdio.conf.js || true && npm run generate:allure && npm run deploy:report && npm run send:email"
   }
 }
