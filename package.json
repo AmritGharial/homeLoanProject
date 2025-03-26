@@ -18,7 +18,10 @@
   "scripts": {
     "clean:allure": "rm -rf allure-results allure-report",
     "generate:allure": "allure generate allure-results --clean -o allure-report",
+    "deploy:report": "git add allure-report && git commit -m 'Upload report' && git push origin `git subtree split --prefix allure-report main`:gh-pages --force",
+    "send:email": "node test/utils/sendReport.cjs",
     "open:allure": "allure open allure-report",
-    "test": "npm run clean:allure && npx wdio wdio.conf.js && npm run generate:allure && npm run open:allure"
+    "test": "npm run clean:allure && npx wdio wdio.conf.js && npm run generate:allure && npm run open:allure",
+    "test:deploy:email": "npm run clean:allure && npx wdio wdio.conf.js && npm run generate:allure && npm run deploy:report && npm run send:email"
   }
 }

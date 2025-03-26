@@ -144,11 +144,11 @@ export const config = {
     // =====
     // Hooks
     // =====
-    onComplete: function() {
-        console.log('Generating Allure Report...');
-        execSync('allure generate allure-results --clean -o allure-report', { stdio: 'inherit' });
-        execSync('allure open allure-report', { stdio: 'inherit' });
-    },
+    // onComplete: function() {
+    //     console.log('Generating Allure Report...');
+    //     execSync('allure generate allure-results --clean -o allure-report', { stdio: 'inherit' });
+    //     execSync('allure open allure-report', { stdio: 'inherit' });
+    // },
     
     // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
     // it and to build services around it. You can either apply a single function or an array of
