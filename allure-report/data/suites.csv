@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1676","should not accept alphabetical value in numeric fields","","Tue Apr 29 17:35:04 IST 2025","passed","Tue Apr 29 17:35:06 IST 2025","","Home Loan Application Form Tests","",""
+"","799","required loan amount field validation","","Tue Apr 29 17:35:18 IST 2025","passed","Tue Apr 29 17:35:19 IST 2025","","Home Loan Application Form Tests","",""
+"","11065","pincode field validation","","Tue Apr 29 17:35:07 IST 2025","failed","Tue Apr 29 17:35:18 IST 2025","","Home Loan Application Form Tests","",""
+"","609","mobile field validation","","Tue Apr 29 17:35:06 IST 2025","passed","Tue Apr 29 17:35:07 IST 2025","","Home Loan Application Form Tests","",""
+"","6405","should show error when all fields are empty","","Tue Apr 29 17:35:19 IST 2025","passed","Tue Apr 29 17:35:25 IST 2025","","Home Loan Application Form Tests","",""
+"","19957","should navigate to OTP page once all form details are correctly filled","","Tue Apr 29 17:35:01 IST 2025","failed","Tue Apr 29 17:35:21 IST 2025","","Home Loan Application Form Tests","",""
+"","3315","should not accept numeric value in full name field","","Tue Apr 29 17:35:01 IST 2025","passed","Tue Apr 29 17:35:04 IST 2025","","Home Loan Application Form Tests","",""

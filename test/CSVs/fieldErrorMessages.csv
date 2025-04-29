@@ -1,0 +1,10 @@
+key,value
+MobileFieldErrorMsg,Mobile number should start with 9 or 8 or 7 or 6
+PincodeFieldErrorMsg,Service is not available on this PIN code
+LoanAmountErrorMsg,"The loan amount must be higher than Rs.1,00,000"
+EmptyFieldErrorMsgName,Please enter your full name
+EmptyFieldErrorMsgMobile,Please enter your 10-digit phone number
+EmptyFieldErrorMsgLoanType,Please select the type of loan you would like to apply for
+EmptyFieldErrorMsgMonthlyIncome,Please enter your net monthly income in Rupees
+EmptyFieldErrorMsgPincode,Please enter your six-digit residential PIN code
+EmptyFieldErrorMsgLoanAmount,Please enter the loan amount you would like to apply for
