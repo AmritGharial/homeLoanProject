@@ -1,0 +1,12 @@
+key,value
+nameField,#fullName
+mobileField,#mobile_id
+salariedRdoBtn,`[for="salaried"]`
+homeLoanDropdown,#typeOfLoanId
+nextMonthlyIncomeField,#netMonthlySal
+pinCodeIdField,#pincodeId
+reqLoanAmountId,#requiredLoanAmountId
+generateOTPButton,#generateBAsicOtp
+errorMsgs,.error
+generateOtpImage,`[alt="OTP Image"]`
+url,https://corpuat.bajajhousingfinance.in/home-loan-application-form
