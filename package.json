@@ -22,7 +22,7 @@
     "deploy:report": "git branch -D gh-pages 2>/dev/null || true && git push origin --delete gh-pages 2>/dev/null || true && git checkout --orphan gh-pages && git add allure-report && git commit -m 'Upload fresh Allure report' && git push -f origin gh-pages && git checkout -",
     "send:email": "node test/utils/sendReport.cjs",
     "open:allure": "allure open allure-report",
-    "test": "npm run clean:allure && npx wdio wdio.conf.js && npm run generate:allure && npm run open:allure",
+    "test": "npm run clean:allure && npx wdio wdio.conf.js || true && npm run generate:allure && npm run open:allure",
     "test:deploy:email": "npm run clean:allure && npx wdio wdio.conf.js || true && npm run generate:allure && npm run deploy:report && npm run send:email"
   }
 }
